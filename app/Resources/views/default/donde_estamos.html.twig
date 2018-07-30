@@ -1,0 +1,13 @@
+{%  extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{parent()}}
+<link rel="stylesheet" href="{{ asset('css/inicio_estilo.css')}}">
+{% endblock %}
+
+{% block contenido %}
+
+	<main>
+		<h2><iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.4278149746397!2d-6.055672484392947!3d37.35605284391136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126d2764004c61%3A0x4dc0ecbba5fdbb75!2sCalle+Juventud%2C+14%2C+41927+Mairena+del+Aljarafe%2C+Sevilla!5e0!3m2!1ses!2ses!4v1524843330451" allowfullscreen></iframe></h2>
+	</main>
+
+{% endblock %}

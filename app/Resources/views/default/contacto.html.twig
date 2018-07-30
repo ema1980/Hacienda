@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{parent()}}
+<link rel="stylesheet" href="{{ asset('css/inicio_estilo.css')}}">
+{% endblock %}
+
+ 
+{% block title %}Contacto{% endblock %}
+
+
+{% block contenido %}
+	<main class="centrado">
+		<form class="contenido">
+			<label>Su nombre</label>
+			<input maxlength="90" class="formulario" type="text" name="Nombre">
+			<label>Email</label>
+			<input maxlength="90" class="formulario" type="email" name="email">
+			<label>Asunto</label>
+			<input maxlength="90" class="formulario" type="text" name="asunto">
+			<label>Su mensaje</label>
+			<textarea class="formulario"></textarea>
+			<input class="boton" type="submit" name="enviar">
+		</form>
+	</main>
+
+
+{% endblock %}

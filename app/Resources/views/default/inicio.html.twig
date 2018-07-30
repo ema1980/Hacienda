@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{parent()}}
+<link rel="stylesheet" href="{{ asset('css/inicio_estilo.css')}}">
+{% endblock %}
+
+{% block contenido %}
+   
+<main class="centrado">
+        <h2><img src="images/home_image.png" alt="home_image"></h2>
+
+        <section class="contenido envoltura">
+        <article class="item"><label>HACIENDA</label><img src= "{{ asset ('images/hacienda.jpg')}}"  alt="hacienda"><p>Hacienda del Siglo XVIII situada en Sevilla, que principalmente se había destiando al cultivo del olivar.</p>
+        <a href="#">LEER MÁS</a>
+        </article>
+        
+        
+        <article class="item"><label>BODAS</label><img src="{{ asset ('images/bodas.jpg')}}" alt="bodas"><p>El mejor enclave para la celebración de tu boda. Reformada para acoger tu boda con las mayores comodidades.</p>
+        <a href="#">LEER MÁS</a>
+        </article>
+        
+
+        <article class="item"><label>EVENTOS</label><img src= "{{ asset ('images/eventos.jpg')}}"  alt="eventos"><p>Preparada para albergar cualquier evento importante: Reuniones de empresa, Bodas, Bautizos, fiestas y celebraciones.</p>
+        <a href="#">LEER MÁS</a>
+        </article>
+        
+
+        <article class="item"><label>COMO LLEGAR</label><img src= "{{ asset ('images/mapa.jpg')}}"  alt="mapa"><p>Situada a 4km de Sevilla, posee un amplio patio de limoneros y jardines ideal para los aperitivos de tu boda al aire libre.</p>
+        <a href="#">LEER MÁS</a>
+        </article>
+        </section>
+
+    </main>
+
+
+{% endblock %}
+
+

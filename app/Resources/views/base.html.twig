@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>{% block title %}Hacienda Guadalupe{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/inicio_estilo.css')}}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css')}}">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <div class="ancho">
+        <div class="sombra">
+            <header class="centrado">
+                <h1 class="contenido"><a href="#"><img src="{{ asset ('images/logo.png')}}" alt="logo"></a></h1>
+                <nav class="contenido">
+                    <ul>
+                        <li><a href="{{path('inicio') }}">INICIO</a></li>
+                        <li><a href="{{path('sobre_nosotros') }}">SOBRE NOSOTROS</a></li>
+                        <li><a href="{{path('donde_estamos') }}">DÓNDE ESTAMOS</a></li>
+                        <li><a href="{{path('contacto') }}">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            {% block contenido %}
+
+            {% endblock %}
+
+        </div>
+
+        <footer class="centrado">
+            <div class="contenido abajo">
+                <img src="{{ asset ('images/logo_footer.png')}}" alt="logo_footer">
+                <p>© 2018 <span>Hacienda Nuestra Señora de Guadalupe</span></p>
+            </div>
+        </footer>
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+
+    {% endblock %}
+</body>
+</html>
